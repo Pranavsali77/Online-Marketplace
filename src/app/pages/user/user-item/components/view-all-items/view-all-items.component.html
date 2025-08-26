@@ -1,0 +1,21 @@
+<!-- 🔔 Sticky Announcement Bar -->
+<div class="announcement-bar" *ngFor="let ann of announcements">
+  <strong>{{ ann.title }}:</strong> {{ ann.message }}
+</div>
+
+<h2 class="heading">Available Items</h2>
+
+<!-- Product Cards -->
+<div class="items-grid">
+  <div class="item-card" *ngFor="let item of items">
+    <img [src]="item.imageUrl" [alt]="item.name" class="item-image" />
+
+    <div class="item-details">
+      <h3>{{ item.name }}</h3>
+      <p>{{ item.description }}</p>
+      <p class="price">₹{{ item.price }}</p>
+    </div>
+
+    <button (click)="viewDetails(item.id)">View Details</button>
+  </div>
+</div>

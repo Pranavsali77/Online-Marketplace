@@ -1,0 +1,19 @@
+<div class="admin-container">
+  <!-- Left Panel -->
+  <div class="admin-sidebar">
+    <h3>Admin Panel</h3>
+    <ul>
+      <li><a routerLink="/admin/add-product">➕ Add Product</a></li>
+      <li><a routerLink="/admin/sales">➕Sale Records</a></li>
+      <li><a routerLink="/admin/announcement">➕Announcement</a></li>
+      <li><a routerLink="/admin/feedback">➕Feedback</a></li>
+
+      <!-- Add more links if needed -->
+    </ul>
+  </div>
+
+  <!-- Right Panel -->
+  <div class="admin-content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

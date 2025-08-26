@@ -1,0 +1,59 @@
+<div class="contact-section">
+  <h2>📞 Contact Us</h2>
+  <p>
+    We're here to help! Reach out with any questions, feedback, or suggestions.
+  </p>
+
+  <div class="contact-wrapper">
+    <!-- Contact Form -->
+    <form
+      class="contact-form"
+      (ngSubmit)="submitMessage()"
+      #contactForm="ngForm"
+    >
+      <label for="name">Your Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="contact.name"
+        required
+        placeholder="Enter your name"
+      />
+
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="contact.email"
+        required
+        placeholder="Enter your email"
+      />
+
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        [(ngModel)]="contact.message"
+        required
+        placeholder="Write your message here..."
+      ></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h4>📍 Address</h4>
+      <p>123 Marketplace Lane,<br />Pune, Maharashtra, India</p>
+
+      <h4>📧 Email</h4>
+      <p>admin@marketplace.com</p>
+
+      <h4>📞 Phone</h4>
+      <p>+91 94056 46523</p>
+    </div>
+  </div>
+</div>

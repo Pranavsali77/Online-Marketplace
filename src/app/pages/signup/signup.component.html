@@ -1,0 +1,48 @@
+<h2>Sign Up</h2>
+
+<form (ngSubmit)="onSignup()" #signupForm="ngForm">
+  <div>
+    <label>Name:</label>
+    <input
+      type="text"
+      [(ngModel)]="userData.name"
+      name="name"
+      required
+      placeholder="Enter your name"
+    />
+  </div>
+
+  <div>
+    <label>Email:</label>
+    <input
+      type="email"
+      [(ngModel)]="userData.email"
+      name="email"
+      required
+      placeholder="Enter your email"
+    />
+  </div>
+
+  <div>
+    <label>Password:</label>
+    <input
+      type="password"
+      [(ngModel)]="userData.password"
+      name="password"
+      required
+      placeholder="Enter your password"
+    />
+  </div>
+
+  <div>
+    <label>Role:</label>
+    <select [(ngModel)]="userData.role" name="role" required>
+      <option value="USER">User</option>
+      <option value="ADMIN">Admin</option>
+    </select>
+  </div>
+
+  <button type="submit">Sign Up</button>
+</form>
+
+<p>Already have an account? <a routerLink="/login">Login</a></p>

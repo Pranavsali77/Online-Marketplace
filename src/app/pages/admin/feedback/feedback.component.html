@@ -1,0 +1,24 @@
+<h2>💬 Customer Feedback</h2>
+
+<table *ngIf="feedbacks.length > 0" border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Customer Name</th>
+      <th>Email</th>
+      <th>Message</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of feedbacks">
+      <td>{{ f.id }}</td>
+      <td>{{ f.customerName }}</td>
+      <td>{{ f.email }}</td>
+      <td>{{ f.message }}</td>
+      <td><button (click)="deleteFeedback(f.id!)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="feedbacks.length === 0">⚠️ No feedbacks available.</p>

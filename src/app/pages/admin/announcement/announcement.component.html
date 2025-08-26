@@ -1,0 +1,28 @@
+<h2>📢 Announcements</h2>
+<form (ngSubmit)="submit()" #form="ngForm">
+  <input
+    type="text"
+    [(ngModel)]="newAnnouncement.title"
+    name="title"
+    placeholder="Title"
+    required
+  />
+  <br /><br />
+  <textarea
+    [(ngModel)]="newAnnouncement.message"
+    name="message"
+    placeholder="Message"
+    required
+  >
+  </textarea>
+  <br /><br />
+  <button type="submit">Add Announcement</button>
+</form>
+<hr />
+<ul>
+  <li *ngFor="let a of announcements">
+    <strong>{{ a.title }}</strong> - {{ a.message }} ({{
+      a.date | date : "short"
+    }}) <button (click)="delete(a.id!)">Delete</button>
+  </li>
+</ul>

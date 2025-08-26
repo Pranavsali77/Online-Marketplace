@@ -1,0 +1,22 @@
+<h2>🧾 Sales Record</h2>
+
+<table *ngIf="sales.length > 0" border="1" cellpadding="10" cellspacing="0">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Item Name</th>
+      <th>Buyer</th>
+      <th>Delivered</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let sale of sales">
+      <td>{{ sale.id }}</td>
+      <td>{{ sale.itemName }}</td>
+      <td>{{ sale.buyer }}</td>
+      <td>{{ sale.delivered }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="sales.length === 0">⚠️ No sales record found.</p>

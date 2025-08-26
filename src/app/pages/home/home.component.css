@@ -1,0 +1,21 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background: linear-gradient(to bottom right, #e0f7fa, #b2ebf2);
+}
+
+.home-card {
+  padding: 3rem 4rem;
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+}
+
+button {
+  margin-top: 20px;
+  font-size: 16px;
+}

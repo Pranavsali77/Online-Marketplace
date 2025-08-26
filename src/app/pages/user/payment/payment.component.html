@@ -1,0 +1,17 @@
+<div class="payment-card">
+  <h2>Payment for {{ item.name }}</h2>
+  <p><strong>Description:</strong> {{ item.description }}</p>
+  <p><strong>Total:</strong> ₹{{ item.price }}</p>
+
+  <div class="btn-group">
+    <button class="btn btn-success" (click)="makePayment()">Pay Now</button>
+    <button class="btn btn-secondary" (click)="skipPayment()">Skip</button>
+  </div>
+</div>
+
+<!-- Optional success message placeholder (if you want to show it before redirecting) -->
+<!--
+<div *ngIf="paymentSuccess">
+  <p class="alert alert-success">{{ paymentSuccess }}</p>
+</div>
+-->
